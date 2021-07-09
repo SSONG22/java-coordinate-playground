@@ -1,18 +1,11 @@
 package inhereited;
 
 public class Tea extends CaffeineBeverage {
-    void prepareRecipe() {
-        boilWater();
-        steepTeaBag();
-        pourInCup();
-        addLemon();
-    }
-
-    public void steepTeaBag() {
+    public void brew() {
         System.out.println("티백을 담근다.");
     }
 
-    public void addLemon() {
+    public void addCondiments() {
         System.out.println("레몬을 추가한다.");
     }
 }
