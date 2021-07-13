@@ -13,7 +13,7 @@ public class K5 extends Car {
 
     @Override
     double getDistancePerLiter() {
-        return distance / liter;
+        return liter;
     }
 
     @Override
@@ -25,4 +25,5 @@ public class K5 extends Car {
     String getName() {
         return name;
     }
+
 }

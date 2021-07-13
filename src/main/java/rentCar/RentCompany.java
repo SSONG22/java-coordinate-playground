@@ -22,7 +22,7 @@ public class RentCompany {
     public String generateReport() {
         StringBuilder sb = new StringBuilder("");
         for (Car car : lentCars) {
-            sb.append(car.getName() + " : " + round(car.getDistancePerLiter()) + "리터" + NEWLINE);
+            sb.append(car.getName() + " : " + round(car.getChargeQuantity()) + "리터" + NEWLINE);
         }
         return sb.toString();
     }
