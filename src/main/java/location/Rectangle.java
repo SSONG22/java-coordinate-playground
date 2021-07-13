@@ -2,7 +2,7 @@ package location;
 
 import java.util.List;
 
-public class Rectangle {
+public class Rectangle implements LocationCalc{
     private Line width;
     private Line height;
 
@@ -28,7 +28,8 @@ public class Rectangle {
         return new Rectangle(width, height);
     }
 
-    public double getArea() {
+    @Override // 사각형 넓이
+    public double length() {
         return width.length() * height.length();
     }
 }

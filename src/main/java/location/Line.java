@@ -3,10 +3,10 @@ package location;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Line {
+public class Line implements LocationCalc{
     private List<Point> points;
 
-    public Line(List<Point> list) {
+    private Line(List<Point> list) {
         points = list;
     }
     public Line(Point a, Point b){
