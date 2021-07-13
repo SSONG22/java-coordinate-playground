@@ -4,23 +4,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Line {
-    private List<Location> locations;
+    private List<Point> points;
 
-    private Line(List<Location> list) {
-        locations = list;
+    public Line(List<Point> list) {
+        points = list;
+    }
+    public Line(Point a, Point b){
+        points = new ArrayList<>();
+        points.add(a); points.add(b);
     }
 
     public static Line of(String input) {
-        List<Location> locations = new ArrayList<>();
-        for (String pair : input.split("-")) {
-            pair = pair.substring(1, pair.length() - 1);
-            String[] xy = pair.split(",");
-            locations.add(new Location(Integer.parseInt(xy[0]), Integer.parseInt(xy[1])));
-        }
-        return new Line(locations);
+        return new Line(StringUtils.convertLocation(input));
     }
 
     public double length() {
-        return locations.get(0).differ(locations.get(1));
+        return points.get(0).differ(points.get(1));
     }
 }

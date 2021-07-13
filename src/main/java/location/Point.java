@@ -1,10 +1,10 @@
 package location;
 
-public class Location {
+public class Point {
     private int x;
     private int y;
 
-    public Location(int x, int y) {
+    public Point(int x, int y) {
         this.x = x;
         this.y = y;
     }
@@ -17,7 +17,11 @@ public class Location {
         return y;
     }
 
-    public double differ(Location B) {
+    public double differ(Point B) {
         return Math.sqrt((this.x - B.getX()) * (this.x - B.getX()) + (this.y - B.getY()) * (this.y - B.getY()));
+    }
+
+    public boolean isLine(Point point) {
+        return ((this.x == point.getX() && this.y != point.getY()) || (this.y == point.getY() && this.x != point.getX()));
     }
 }
