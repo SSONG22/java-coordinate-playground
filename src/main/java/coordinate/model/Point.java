@@ -15,7 +15,12 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-
+    public int getX(){
+        return x;
+    }
+    public int getY(){
+        return y;
+    }
     private void checkRangeOf(int x, int y) {
         if (exceedRange(x) || exceedRange(y))
             throw new IllegalArgumentException(ERROR_OUT_OF_POINT_RANGE);

@@ -2,8 +2,8 @@ package coordinate.model;
 
 import java.util.List;
 
-public class Line extends AbstractFigure{
-    private static final String RESULT_OF_LINE ="두 점 사이의 거리는 ";
+public class Line extends AbstractFigure {
+    private static final String RESULT_OF_LINE = "두 점 사이의 거리는 ";
 
     public Line(List<Point> points) {
         super(points);
@@ -16,6 +16,6 @@ public class Line extends AbstractFigure{
 
     @Override
     public String getAreaInfo() {
-        return null;
+        return RESULT_OF_LINE + area();
     }
 }

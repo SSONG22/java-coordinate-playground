@@ -1,6 +1,7 @@
 package coordinate.model;
 
 import java.util.List;
+import java.util.Objects;
 
 public abstract class AbstractFigure implements Figure{
 
@@ -27,4 +28,17 @@ public abstract class AbstractFigure implements Figure{
 //    double area();
 //    String getAreaInfo(); 는 Figure 구현체에서 Override
 
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        AbstractFigure that = (AbstractFigure) o;
+        return Objects.equals(points, that.points);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(points);
+    }
 }
