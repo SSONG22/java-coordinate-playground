@@ -15,12 +15,15 @@ public class Point {
         this.x = x;
         this.y = y;
     }
-    public int getX(){
+
+    public int getX() {
         return x;
     }
-    public int getY(){
+
+    public int getY() {
         return y;
     }
+
     private void checkRangeOf(int x, int y) {
         if (exceedRange(x) || exceedRange(y))
             throw new IllegalArgumentException(ERROR_OUT_OF_POINT_RANGE);
@@ -54,5 +57,13 @@ public class Point {
 
     private double squareDifference(int first, int second) {
         return Math.pow(first - second, 2);
+    }
+
+    public double calculateSlope(Point point) {
+        // 두 점의 기울기
+        if (this.x == point.x) {
+            return Double.MAX_VALUE;
+        }
+        return Math.abs((double) (this.y - point.y) / (this.x - point.x));
     }
 }

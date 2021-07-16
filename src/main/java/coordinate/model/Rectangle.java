@@ -9,9 +9,9 @@ import static java.util.stream.Collectors.toSet;
 
 public class Rectangle extends AbstractFigure {
 
-    private static final String ERROR_INVALID_RECTANGE = "직사각형 모양이 아닙니다.";
+    private static final String ERROR_INVALID_RECTANGLE = "직사각형 모양이 아닙니다.";
     private static final String OUTPUT_AREA_OF_RECTANGLE = "사각형의 넓이는 ";
-    private static final int NUM_OF_TYPES_OF_RECTANGLE_COORDINATES = 2;
+    private static final int NUM_OF_TYPES_OF_RECTANGLE_COORDINATES = 2; // 다른 값의 x(y도 마찬가지)가 2여야 한다
 
     Rectangle(List<Point> points) {
         super(points);
@@ -23,7 +23,7 @@ public class Rectangle extends AbstractFigure {
         Set<Integer> yValuesOfPoints = convertToUniqueYValues(points);
 
         if (hasNotTwoPoints(xValuesOfPoints) || hasNotTwoPoints(yValuesOfPoints)) {
-            throw new IllegalArgumentException(ERROR_INVALID_RECTANGE);
+            throw new IllegalArgumentException(ERROR_INVALID_RECTANGLE);
         }
     }
 
