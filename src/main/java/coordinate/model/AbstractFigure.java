@@ -5,7 +5,7 @@ import java.util.Objects;
 
 public abstract class AbstractFigure implements Figure{
 
-    private static final String ERROR_FIGURE_NULL = "올바른 Point 값이 아닙니다.";
+    public static final String ERROR_FIGURE_NULL = "올바른 Point 값이 아닙니다.";
     private final List<Point> points;
 
     // 생성자, 공통로직만 구현

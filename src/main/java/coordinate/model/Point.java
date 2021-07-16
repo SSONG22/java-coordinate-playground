@@ -4,8 +4,8 @@ import java.util.Objects;
 
 public class Point {
     private static final String ERROR_OUT_OF_POINT_RANGE = "잘못된 범위의 입력입니다. 정수 범위는" + Point.LOWER_LIMIT + "~" + Point.UPPER_LIMIT + " 사이의 수로 입력해주세요.";
-    private static final int LOWER_LIMIT = 1;
-    private static final int UPPER_LIMIT = 24;
+    public static final int LOWER_LIMIT = 1;
+    public static final int UPPER_LIMIT = 24;
     private final int x;
     private final int y;
 
